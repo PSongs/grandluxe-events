@@ -1,73 +1,153 @@
-# Welcome to your Lovable project
+# GrandLuxe Events - Premium Event Decoration Company Website
 
-## Project info
+A professional, modern, and fully responsive website built with React and Vite for GrandLuxe Events, a luxury event decoration company.
 
-**URL**: https://lovable.dev/projects/3e9edd5c-ee35-4557-9b8d-e05bc78543f4
+## 🚀 Getting Started
 
-## How can I edit this code?
+### Prerequisites
+- Node.js (v16 or higher)
+- npm or yarn
 
-There are several ways of editing your application.
+### Installation
 
-**Use Lovable**
+1. Clone the repository
+```bash
+git clone <your-repo-url>
+cd grandluxe-events
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/3e9edd5c-ee35-4557-9b8d-e05bc78543f4) and start prompting.
+2. Install dependencies
+```bash
+npm install
+```
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+## 📁 Project Structure
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```
+src/
+├── components/         # Reusable UI components
+│   ├── Navbar.tsx     # Navigation with mobile menu
+│   ├── Hero.tsx       # Hero section with CTA
+│   ├── Services.tsx   # Services showcase
+│   ├── About.tsx      # About section with mission & values
+│   ├── Contact.tsx    # Contact form with WhatsApp integration
+│   └── Footer.tsx     # Footer component
+├── pages/             # Page components
+│   └── Index.tsx      # Main landing page
+├── assets/            # Images and static assets
+│   ├── hero-bg.jpg    # Hero background image
+│   └── logo.png       # Company logo
+├── styles/            # Global styles
+│   └── index.css      # Tailwind CSS and custom styles
+└── lib/               # Utility functions
+    └── utils.ts       # Helper functions
+```
 
-## What technologies are used for this project?
+## 🎨 Customization Guide
 
-This project is built with:
+### Changing Colors
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+The color palette is defined in `src/index.css`. The site uses a luxury theme with:
+- **Primary (Dark Plum)**: `--primary: 300 35% 25%;`
+- **Accent (Metallic Gold)**: `--accent: 45 85% 55%;`
+- **Background (White)**: `--background: 0 0% 100%;`
 
-## How can I deploy this project?
+To change colors, edit the CSS variables in the `:root` section:
 
-Simply open [Lovable](https://lovable.dev/projects/3e9edd5c-ee35-4557-9b8d-e05bc78543f4) and click on Share -> Publish.
+```css
+:root {
+  --primary: 300 35% 25%;    /* Change the dark plum color */
+  --accent: 45 85% 55%;      /* Change the metallic gold color */
+  /* ... other colors */
+}
+```
 
-## Can I connect a custom domain to my Lovable project?
+### Modifying Animation Timing
 
-Yes, you can!
+Animations use Framer Motion. To adjust animation speeds, look for `transition` props:
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+```tsx
+// In any component file
+transition={{ duration: 0.6, delay: 0.2 }}
+```
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Change `duration` (animation speed) and `delay` (start time) values as needed.
+
+### Editing Content
+
+#### Hero Section
+Edit `src/components/Hero.tsx`:
+- Main headline
+- Subheadline
+- Call-to-action button text
+
+#### Services
+Edit `src/components/Services.tsx`:
+- Service titles and descriptions in the `services` array
+- Add/remove services by modifying the array
+
+#### About Section
+Edit `src/components/About.tsx`:
+- Mission statement text
+- Core values in the `values` array
+
+#### Contact Form
+Edit `src/components/Contact.tsx`:
+- Form fields
+- WhatsApp number: Change `+2349042802225` to your number
+- Contact information (phone, email, location)
+
+### Replacing Images
+
+1. Add your images to `src/assets/`
+2. Update imports in components:
+
+```tsx
+import heroImage from '@/assets/your-image.jpg';
+import logo from '@/assets/your-logo.png';
+```
+
+## 🎯 Features
+
+- ✨ Smooth scroll-triggered animations
+- 📱 Fully responsive (mobile, tablet, desktop)
+- 🍔 Hamburger menu for mobile navigation
+- 📧 Contact form with validation
+- 💬 WhatsApp integration
+- ♿ Accessible (semantic HTML, focus states)
+- 🎨 Luxury design with elegant color palette
+- ⚡ Fast performance with Vite
+
+## 🛠️ Technologies Used
+
+- **React 18** - UI framework
+- **Vite** - Build tool
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **Framer Motion** - Animations
+- **Shadcn UI** - Component library
+- **Lucide React** - Icons
+
+## 📝 License
+
+This project is private and proprietary to GrandLuxe Events.
+
+## 💼 Support
+
+For support, email info@grandluxe-events.com or call +234 904 280 2225.
+
+---
+
+Built with ❤️ for unforgettable celebrations
