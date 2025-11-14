@@ -91,7 +91,7 @@ const Contact = () => {
   };
 
   const handleWhatsApp = () => {
-    const phone = '2349042802225';
+    const phone = '2347060768176';
     const message = encodeURIComponent(
       `Hello GrandLuxe Events! I'm interested in your event decoration services.`
     );
@@ -222,7 +222,7 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
-            <div className="bg-gradient-primary text-white rounded-2xl p-8 shadow-elegant">
+            <div className="bg-gradient-primary text-black rounded-2xl p-8 shadow-elegant">
               <h3 className="text-2xl font-serif font-semibold mb-6">Contact Information</h3>
               
               <div className="space-y-6">
@@ -232,7 +232,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Phone</h4>
-                    <a href="tel:+2349042802225" className="text-white/90 hover:text-accent transition-colors">
+                    <a href="tel:+2349042802225" className="text-black/90 hover:text-accent transition-colors">
                       +234 904 280 2225
                     </a>
                   </div>
@@ -244,8 +244,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Email</h4>
-                    <a href="mailto:info@grandluxe-events.com" className="text-white/90 hover:text-accent transition-colors">
-                      info@grandluxe-events.com
+                    <a href="mailto:info@grandluxe-events.com" className="text-black/90 hover:text-accent transition-colors">
+                      grandluxeeventsmomentsltd@gmail.com
                     </a>
                   </div>
                 </div>
@@ -256,7 +256,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="text-white/90">
+                    <p className="text-black/90">
                       Serving clients across Nigeria
                     </p>
                   </div>

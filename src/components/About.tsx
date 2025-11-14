@@ -58,7 +58,7 @@ const About = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="max-w-4xl mx-auto mb-20"
         >
-          <div className="bg-gradient-primary text-white rounded-2xl p-12 shadow-elegant">
+          <div className="bg-gradient-primary text-black rounded-2xl p-12 shadow-elegant">
             <h3 className="text-2xl md:text-3xl font-serif font-semibold mb-6 text-center">
               Our Mission Statement
             </h3>
