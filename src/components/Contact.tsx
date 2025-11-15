@@ -233,7 +233,7 @@ const Contact = () => {
                   <div>
                     <h4 className="font-semibold mb-1">Phone</h4>
                     <a href="tel:+2349042802225" className="text-black/90 hover:text-accent transition-colors">
-                      +234 904 280 2225
+                      +234 706 076 8176
                     </a>
                   </div>
                 </div>

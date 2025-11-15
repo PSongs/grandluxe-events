@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
-import heroImage from '@/assets/hero-bg.jpg';
+import heroImage from '../assets/Hero-img.png';
 
 const Hero = () => {
   const scrollToContact = () => {
