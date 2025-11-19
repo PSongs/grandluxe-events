@@ -99,33 +99,33 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 md:py-32 bg-muted">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="scroll-mt-20 sm:scroll-mt-28 bg-muted py-12 sm:py-16 md:scroll-mt-32 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-foreground mb-3 sm:mb-4 px-2">
             Get In Touch
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto mb-6" />
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+          <div className="w-16 sm:w-24 h-0.5 sm:h-1 bg-accent mx-auto mb-4 sm:mb-6" />
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
             Ready to transform your event into an unforgettable experience? Let's discuss your vision.
           </p>
         </motion.div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:gap-8 lg:grid-cols-2 lg:gap-10 xl:gap-12">
           {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-card rounded-2xl p-8 shadow-elegant"
+            className="rounded-xl sm:rounded-2xl bg-card p-5 sm:p-6 md:p-8 lg:p-10 shadow-elegant"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
               <div>
                 <Label htmlFor="name">Full Name *</Label>
                 <Input
@@ -187,13 +187,13 @@ const Contact = () => {
                 </p>
               </div>
 
-              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base py-5 sm:py-6">
                 Send Message
               </Button>
             </form>
 
             {/* WhatsApp Button */}
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-border" />
@@ -207,7 +207,7 @@ const Contact = () => {
                 type="button"
                 onClick={handleWhatsApp}
                 variant="outline"
-                className="w-full mt-4 border-accent text-accent hover:bg-accent hover:text-accent-foreground transition-colors"
+                className="mt-3 sm:mt-4 w-full border-accent text-accent transition-colors hover:bg-accent hover:text-accent-foreground text-sm sm:text-base py-5 sm:py-6"
               >
                 <MessageCircle className="mr-2 h-4 w-4" />
                 WhatsApp Us
@@ -220,43 +220,43 @@ const Contact = () => {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
-            <div className="bg-gradient-primary text-black rounded-2xl p-8 shadow-elegant">
-              <h3 className="text-2xl font-serif font-semibold mb-6">Contact Information</h3>
+            <div className="bg-gradient-primary text-black rounded-xl sm:rounded-2xl p-5 sm:p-6 md:p-8 shadow-elegant break-words">
+              <h3 className="text-xl sm:text-2xl font-serif font-semibold mb-4 sm:mb-5 md:mb-6">Contact Information</h3>
               
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-white/10 rounded-lg">
-                    <Phone className="w-6 h-6" />
+              <div className="space-y-4 sm:space-y-5 md:space-y-6">
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-white/10 rounded-lg flex-shrink-0">
+                    <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Phone</h4>
-                    <a href="tel:+2349042802225" className="text-black/90 hover:text-accent transition-colors">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-semibold mb-1 text-sm sm:text-base">Phone</h4>
+                    <a href="tel:+2349042802225" className="text-sm sm:text-base text-black/90 hover:text-accent transition-colors break-all">
                       +234 706 076 8176
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-white/10 rounded-lg">
-                    <Mail className="w-6 h-6" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-white/10 rounded-lg flex-shrink-0">
+                    <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Email</h4>
-                    <a href="mailto:info@grandluxe-events.com" className="text-black/90 hover:text-accent transition-colors">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-semibold mb-1 text-sm sm:text-base">Email</h4>
+                    <a href="mailto:grandluxeeventsmomentsltd@gmail.com" className="text-sm sm:text-base text-black/90 hover:text-accent transition-colors break-all">
                       grandluxeeventsmomentsltd@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="p-3 bg-white/10 rounded-lg">
-                    <MapPin className="w-6 h-6" />
+                <div className="flex items-start gap-3 sm:gap-4">
+                  <div className="p-2 sm:p-3 bg-white/10 rounded-lg flex-shrink-0">
+                    <MapPin className="w-5 h-5 sm:w-6 sm:h-6" />
                   </div>
-                  <div>
-                    <h4 className="font-semibold mb-1">Location</h4>
-                    <p className="text-black/90">
+                  <div className="min-w-0 flex-1">
+                    <h4 className="font-semibold mb-1 text-sm sm:text-base">Location</h4>
+                    <p className="text-sm sm:text-base text-black/90">
                       Serving clients across Nigeria
                     </p>
                   </div>
@@ -264,18 +264,18 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-card rounded-2xl p-8 shadow-elegant">
-              <h3 className="text-xl font-serif font-semibold mb-4 text-foreground">Business Hours</h3>
-              <div className="space-y-2 text-muted-foreground">
-                <p className="flex justify-between">
+            <div className="rounded-xl sm:rounded-2xl bg-card p-5 sm:p-6 md:p-8 shadow-elegant">
+              <h3 className="text-lg sm:text-xl font-serif font-semibold mb-3 sm:mb-4 text-foreground">Business Hours</h3>
+              <div className="space-y-2 sm:space-y-2.5 text-muted-foreground">
+                <p className="flex flex-col gap-1 text-xs sm:text-sm md:text-base text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
                   <span>Monday - Friday:</span>
                   <span className="font-medium text-foreground">9:00 AM - 6:00 PM</span>
                 </p>
-                <p className="flex justify-between">
+                <p className="flex flex-col gap-1 text-xs sm:text-sm md:text-base text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
                   <span>Saturday:</span>
                   <span className="font-medium text-foreground">10:00 AM - 4:00 PM</span>
                 </p>
-                <p className="flex justify-between">
+                <p className="flex flex-col gap-1 text-xs sm:text-sm md:text-base text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
                   <span>Sunday:</span>
                   <span className="font-medium text-foreground">By Appointment</span>
                 </p>

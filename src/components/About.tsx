@@ -36,19 +36,19 @@ const About = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section id="about" className="py-20 md:py-32 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="about" className="scroll-mt-20 sm:scroll-mt-28 bg-background py-12 sm:py-16 md:scroll-mt-32 md:py-24 lg:py-32">
+      <div className="container mx-auto px-4 sm:px-6">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-12 md:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-serif font-bold text-foreground mb-3 sm:mb-4 px-2">
             About GrandLuxe Events
           </h2>
-          <div className="w-24 h-1 bg-accent mx-auto" />
+          <div className="w-16 sm:w-24 h-0.5 sm:h-1 bg-accent mx-auto" />
         </motion.div>
 
         {/* Mission Statement */}
@@ -56,13 +56,13 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-4xl mx-auto mb-20"
+          className="mx-auto mb-10 sm:mb-12 md:mb-16 lg:mb-20 max-w-4xl px-2 sm:px-4"
         >
-          <div className="bg-gradient-primary text-black rounded-2xl p-12 shadow-elegant">
-            <h3 className="text-2xl md:text-3xl font-serif font-semibold mb-6 text-center">
+          <div className="rounded-xl sm:rounded-2xl bg-gradient-primary p-5 sm:p-6 md:p-8 lg:p-10 xl:p-12 text-black shadow-elegant">
+            <h3 className="mb-3 sm:mb-4 text-lg sm:text-xl md:text-2xl lg:text-3xl font-serif font-semibold text-center text-black">
               Our Mission Statement
             </h3>
-            <p className="text-lg md:text-xl leading-relaxed text-center">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed text-center">
               To create unforgettable event experiences with elegance, excellence, and innovation — 
               turning every client&apos;s vision into a timeless masterpiece.
             </p>
@@ -74,13 +74,13 @@ const About = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="max-w-6xl mx-auto"
+          className="mx-auto max-w-6xl"
         >
-          <h3 className="text-3xl md:text-4xl font-serif font-bold text-center mb-12 text-foreground">
+          <h3 className="mb-8 sm:mb-10 md:mb-12 text-xl sm:text-2xl md:text-3xl lg:text-4xl font-serif font-bold text-center text-foreground px-2">
             Our Core Values
           </h3>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
@@ -89,15 +89,15 @@ const About = () => {
                   initial={{ opacity: 0, y: 30 }}
                   animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  className="bg-card rounded-lg p-8 shadow-elegant hover:shadow-gold transition-all duration-300 text-center"
+                  className="bg-card rounded-lg p-5 sm:p-6 md:p-8 text-center shadow-elegant transition-all duration-300 hover:shadow-gold"
                 >
-                  <div className="inline-flex p-4 bg-accent/10 rounded-full mb-4">
-                    <Icon className="w-8 h-8 text-accent" />
+                  <div className="inline-flex p-3 sm:p-4 bg-accent/10 rounded-full mb-3 sm:mb-4">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-accent" />
                   </div>
-                  <h4 className="text-xl font-serif font-semibold mb-3 text-foreground">
+                  <h4 className="text-lg sm:text-xl font-serif font-semibold mb-2 sm:mb-3 text-foreground">
                     {value.title}
                   </h4>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                     {value.description}
                   </p>
                 </motion.div>

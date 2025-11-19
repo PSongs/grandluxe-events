@@ -36,15 +36,15 @@ const Navbar = () => {
         isScrolled ? 'bg-background/95 backdrop-blur-md shadow-elegant' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <a href="#home" onClick={(e) => { e.preventDefault(); scrollToSection('#home'); }}>
-            <img src={logo} alt="GrandLuxe Events" className="h-12 w-auto" />
+            <img src={logo} alt="GrandLuxe Events" className="h-8 sm:h-10 md:h-12 w-auto" />
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6 lg:gap-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
@@ -53,7 +53,7 @@ const Navbar = () => {
                   e.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                className="text-sm lg:text-base text-foreground hover:text-primary transition-colors duration-300 font-medium"
               >
                 {link.name}
               </a>
@@ -62,11 +62,11 @@ const Navbar = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-foreground hover:text-primary transition-colors"
+            className="md:hidden text-foreground hover:text-primary transition-colors p-2 -mr-2"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
 
@@ -80,7 +80,7 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="flex flex-col gap-4 pt-4 pb-2">
+              <div className="flex flex-col gap-2 pt-4 pb-3 border-t border-border/50">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
@@ -89,7 +89,7 @@ const Navbar = () => {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium py-2"
+                    className="text-base text-foreground hover:text-primary transition-colors duration-300 font-medium py-2.5 px-2 rounded-md hover:bg-muted/50"
                   >
                     {link.name}
                   </a>
