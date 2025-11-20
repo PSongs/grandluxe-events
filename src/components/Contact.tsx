@@ -69,9 +69,14 @@ const Contact = () => {
     return !Object.values(newErrors).some(error => error !== '');
   };
 
-  const handleFormValidation = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (!validateForm()) {
-      e.preventDefault();
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (validateForm()) {
+      toast.success('Thank you! We\'ll get back to you soon.');
+      setFormData({ name: '', email: '', eventType: '', message: '' });
+      setErrors({ name: '', email: '', eventType: '', message: '' });
+    } else {
       toast.error('Please fill in all required fields correctly.');
     }
   };
@@ -121,12 +126,7 @@ const Contact = () => {
             className="rounded-xl sm:rounded-2xl bg-card p-5 sm:p-6 md:p-8 lg:p-10 shadow-elegant"
           >
           {/* FORM SECTION */}
-            <form
-              action="https://formsubmit.co/grandluxeeventsmomentsltd@gmail.com"
-              method="POST"
-              className="space-y-4 sm:space-y-5 md:space-y-6"
-            >
-              <input type="hidden" name="_captcha" value="false" />
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5 md:space-y-6">
               <div>
                 <Label htmlFor="name">Full Name *</Label>
                 <Input
@@ -188,11 +188,7 @@ const Contact = () => {
                 </p>
               </div>
 
-              <Button
-                type="submit"
-                onClick={handleFormValidation}
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base py-5 sm:py-6"
-              >
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground text-sm sm:text-base py-5 sm:py-6">
                 Send Message
               </Button>
             </form>
